@@ -14,16 +14,13 @@ const Navbar = () => {
       <StyledContainer>
         <StyledContent>
           <StyledLogo>
-            <StyledLink to='/'>Played it</StyledLink>
+            <StyledLink to='/watching'>Played it</StyledLink>
             <StyledList>
               <StyledItem>
-                <StyledLink to='/'>Playing</StyledLink>
+                <StyledLink to='/seen'>Played</StyledLink>
               </StyledItem>
               <StyledItem>
-                <StyledLink to='/'>Finished</StyledLink>
-              </StyledItem>
-              <StyledItem>
-                <StyledLink to='/'></StyledLink>
+                <StyledLink to='/add'>Add</StyledLink>
               </StyledItem>
             </StyledList>
           </StyledLogo>
