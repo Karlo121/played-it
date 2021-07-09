@@ -5,7 +5,9 @@ import {
   StyledItem,
   StyledLink,
   StyledList,
-  StyledLogo,
+  StyledHome,
+  StyledHeader,
+  LogoIcon,
 } from './Navbar.style';
 
 const Navbar = () => {
@@ -13,17 +15,23 @@ const Navbar = () => {
     <header>
       <StyledContainer>
         <StyledContent>
-          <StyledLogo>
-            <StyledLink to='/watching'>Played it</StyledLink>
+          <StyledHome>
+            <>
+              <StyledHeader>
+                <LogoIcon />
+                Seen it
+              </StyledHeader>
+            </>
+            <StyledLink to='/watching'>Watching</StyledLink>
             <StyledList>
               <StyledItem>
-                <StyledLink to='/seen'>Played</StyledLink>
+                <StyledLink to='/seen'>Seen</StyledLink>
               </StyledItem>
               <StyledItem>
                 <StyledLink to='/add'>Add</StyledLink>
               </StyledItem>
             </StyledList>
-          </StyledLogo>
+          </StyledHome>
         </StyledContent>
       </StyledContainer>
     </header>
