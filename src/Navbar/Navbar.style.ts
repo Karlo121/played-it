@@ -1,36 +1,15 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { MoviesAndTv } from '@styled-icons/fluentui-system-regular/MoviesAndTv';
+import { MoviesAndTv, Add } from '@styled-icons/fluentui-system-regular';
 
 export const StyledContainer = styled.div`
   margin: 0 auto;
   width: 100%;
   background-color: #705e78;
-`;
-
-export const StyledContent = styled.div`
-  width: 700px;
-  margin: 0 auto;
-`;
-
-export const StyledHome = styled.div`
-  width: 700px;
-  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
-`;
-
-export const StyledList = styled.ul`
-  margin-top: 0px;
-`;
-
-export const StyledHeader = styled.h1`
-  color: white;
-  margin-left: 0px;
-`;
-
-export const StyledItem = styled.li`
-  display: inline;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const StyledLink = styled(Link)`
@@ -38,7 +17,6 @@ export const StyledLink = styled(Link)`
   color: white;
   font-weight: bold;
   font-size: 27px;
-  margin-right: 30px;
 
   :hover {
     color: #fea443;
@@ -48,4 +26,62 @@ export const StyledLink = styled(Link)`
 export const LogoIcon = styled(MoviesAndTv)`
   color: white;
   height: 70px;
+
+  :hover {
+    color: #fea443;
+  }
+`;
+
+export const AddIcon = styled(Add)`
+  color: white;
+  height: 30px;
+  margin-right: 5px;
+`;
+
+export const StyledContent = styled.div`
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+
+  .linkHover {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 27px;
+    :hover {
+      color: #fea443;
+      ${LogoIcon} {
+        color: #fea443;
+      }
+    }
+  }
+
+  :hover {
+    color: #fea443;
+  }
+`;
+
+export const StyledHeader = styled.h1`
+  color: white;
+`;
+
+export const StyledButton = styled.button`
+  width: 100px;
+  height: 40px;
+  color: white;
+  font-size: 27px;
+  display: flex;
+  font-weight: 900;
+
+  background-color: transparent;
+  border: 3px solid white;
+  border-radius: 7px;
+
+  :hover {
+    color: #fea443;
+    border-color: #fea443;
+    ${AddIcon} {
+      color: #fea443;
+    }
+  }
 `;

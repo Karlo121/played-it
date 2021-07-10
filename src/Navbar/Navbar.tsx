@@ -2,12 +2,10 @@ import { Link } from 'react-router-dom';
 import {
   StyledContainer,
   StyledContent,
-  StyledItem,
   StyledLink,
-  StyledList,
-  StyledHome,
-  StyledHeader,
   LogoIcon,
+  StyledButton,
+  AddIcon,
 } from './Navbar.style';
 
 const Navbar = () => {
@@ -15,23 +13,21 @@ const Navbar = () => {
     <header>
       <StyledContainer>
         <StyledContent>
-          <StyledHome>
-            <>
-              <StyledHeader>
-                <LogoIcon />
-                Seen it
-              </StyledHeader>
-            </>
-            <StyledLink to='/watching'>Watching</StyledLink>
-            <StyledList>
-              <StyledItem>
-                <StyledLink to='/seen'>Seen</StyledLink>
-              </StyledItem>
-              <StyledItem>
-                <StyledLink to='/add'>Add</StyledLink>
-              </StyledItem>
-            </StyledList>
-          </StyledHome>
+          <Link className='linkHover' to='/watching'>
+            <LogoIcon />
+            Seen it
+          </Link>
+        </StyledContent>
+        <StyledContent>
+          <StyledLink to='/seen'>Seen</StyledLink>
+        </StyledContent>
+        <StyledContent>
+          <StyledLink to='/add'>
+            <StyledButton>
+              <AddIcon />
+              Add
+            </StyledButton>
+          </StyledLink>
         </StyledContent>
       </StyledContainer>
     </header>
